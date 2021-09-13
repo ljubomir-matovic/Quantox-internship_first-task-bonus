@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 *{
     margin: 0;
@@ -6,19 +6,40 @@
 }
 body{
     font-size: 13px;
-    font-family: "Barlow Semi Condensed";
+    font-family: "Barlow Semi Condensed",sans-serif;
+    font-weight: 500;
     background-color: hsl(0, 0%, 81%);
     color:hsl(0, 0%, 81%);
 }
+.container{
+    position: absolute;
+}
+
+#quotation{
+    position: absolute;
+    top:0;
+    right: 40px;
+}
+.review{
+    opacity:0.7;
+    margin: 20px;
+    margin-top: 0;
+}
 .dark-color{
-    color:hsl(210, 46%, 95%);
+    color:hsla(217, 19%, 35%);
 }
 .white-color{
     color:white;
 }
 .bold{
+    font-style: normal;
     font-weight: 600;
     font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    line-height: 24px;
+    z-index: 1;
 }
 .purple-bg{
     background-color:hsl(263, 55%, 52%);
@@ -34,8 +55,38 @@ body{
 }
 .grid-item{
     border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.profile-image{
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+}
+.about{
+    margin:20px;
+    position: relative;
+}
+#daniel{
+    border: 2px solid #A775F1;
+}
+#patric{
+    border:2px solid hsl(263, 55%, 52%);
+}
+.upper-text{
+    position: absolute;
+    top: calc(50% - 13px/2 - 7.5px);
+}
+.downer-text{
+    opacity: 0.5;
+    font-size: 11px;
 }
 @media screen and (max-width:667px) {
+    .container{
+        margin-top: 100px;
+    }
     .grid-item{
         width: 100vw;
         margin-bottom: 10px;
@@ -52,13 +103,13 @@ body{
     .container{
         display: grid;
         grid-template-columns: 60vw 20vw;
-        grid-column-gap: 10px;
+        grid-column-gap: 30px;
     }
     .left-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
     }
     .col-2-l{
         grid-column: 1/3;
